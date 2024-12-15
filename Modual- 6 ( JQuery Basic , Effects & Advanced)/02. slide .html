@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background-color: #333;
+            text-align: center;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content-box {
+            background-color: #FFD700;
+            color: #333;
+            padding: 30px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn,
+        .btn1 {
+            padding: 10px 20px;
+            border: none;
+            color: #333;
+            font-size: 1em;
+
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .btn {
+            background-color: #FFD700;
+        }
+
+        .btn:hover {
+            background-color: #ffea00;
+        }
+
+        .btn1 {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Create this using jQuery</h2>
+
+    <div class="container">
+        <div class="content-box" id="contentBox">
+            SlideToggle / SlideUp / SlideDown <br> Pure JavaScript
+        </div>
+        <div class="button-container">
+            <button class="btn" id="slideUpBtn">slideUp</button>
+            <button class="btn" id="slideDownBtn">slideDown</button>
+            <button class="btn1" id="slideToggleBtn">slideToggle</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Slide Up Button
+            $('#slideUpBtn').click(function () {
+                $('#contentBox').slideUp();
+            });
+
+            // Slide Down Button
+            $('#slideDownBtn').click(function () {
+                $('#contentBox').slideDown();
+            });
+
+            // Slide Toggle Button
+            $('#slideToggleBtn').click(function () {
+                $('#contentBox').slideToggle();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

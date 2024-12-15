@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+           * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .color-box1,.color-box2,.color-box3,.color-box4,.color-box5,.color-box6 {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 10px;
+            margin-top: 130px;
+            background-color: #ddd;
+        }
+        .container {
+            background: linear-gradient(to bottom, #00ffff, #0000ff);
+            padding: 20px;
+            height: 400px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            /* cursor: pointer; */
+        }
+        .color-box1{
+           background-color: red;
+        }
+        .color-box2{
+            background-color: cyan;
+        }
+        .color-box3{
+            background-color: lime;
+        }
+        .color-box4{
+            background-color: black;
+        }
+        .color-box5{
+            background-color: rgb(201, 44, 159);
+        }
+        .color-box6{
+            background-color: darkred;
+        }
+        h2{
+            padding-top:30px ;
+        }
+    </style>
+</head>
+<body>
+  <h2> u Change Background Color using jQuery</h2>
+  <br>
+  <br>
+  <br>
+<div class="container" id="container">
+    <div class="color-box1"></div>
+    <div class="color-box2"></div>
+    <div class="color-box3"></div>
+    <div class="color-box4"></div>
+    <div class="color-box5"></div>
+    <div class="color-box6"></div>
+</div>
+<button id="changeColorBtn">u</button>
+
+<script>
+
+
+    $(document).ready(function() {
+        $('#changeColorBtn').click(function() {
+            $('#container').css('background', 'linear-gradient(to bottom, #ff69b4, #ff4500)');
+        });
+    });
+</script>
+
+</body>
+</html>

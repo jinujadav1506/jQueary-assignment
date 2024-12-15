@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Fade Out</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #8387d3;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .images {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            margin-left: 70px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            transition: opacity 0.5s;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2F8D8A;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #25776c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="text">
+            <ul>
+                <li>
+                    <h2>Create Fade Out using J Queary</h2>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>jQuery fadeOut</h2>
+            <div class="images">
+                <img src="./images.jpg" alt="Image 1" class="fade-image">
+                <img src="./images.jpg" alt="Image 2" class="fade-image">
+                <img src="./images.jpg" alt="Image 3" class="fade-image">
+            </div>
+            <button id="fadeButton">Show</button>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#fadeButton').click(function () {
+                $('.fade-image').fadeOut(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
